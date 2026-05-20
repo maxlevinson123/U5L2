@@ -60,4 +60,34 @@ public class Deck {
         cards.add(new Card("clubs", "K"));
         this.cards = cards;
     }
+
+    public Card getRandomCard() {
+        String s = "";
+        String v = "";
+
+        // get random suit
+        int i = (int) (Math.random() * 4);
+        if (i == 0) s = "spades";
+        else if (i == 1) s = "hearts";
+        else if (i == 2) s = "diamonds";
+        else s = "clubs";
+
+        // get random value
+        int k = (int) (Math.random() * 13);
+        if (k == 0) v = "A";
+        else if (k == 1) v = "02";
+        else if (k == 2) v = "03";
+        else if (k == 3) v = "04";
+        else if (k == 4) v = "05";
+        else if (k == 5) v = "06";
+        else if (k == 6) v = "07";
+        else if (k == 7) v = "09";
+        else if (k == 8) v = "09";
+        else if (k == 9) v = "10";
+        else if (k == 10) v = "J";
+        else if (k == 11) v = "Q";
+        else v = "K";
+
+        return new Card(s, v);
+    }
 }
