@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Deck {
 
-    private ArrayList<Card> cards;
+    private ArrayList<Card> deck;
 
     public Deck() {
         ArrayList<Card> cards = new ArrayList<>();
@@ -58,7 +58,7 @@ public class Deck {
         cards.add(new Card("clubs", "J"));
         cards.add(new Card("clubs", "Q"));
         cards.add(new Card("clubs", "K"));
-        this.cards = cards;
+        this.deck = cards;
     }
 
     public Card getRandomCard() {
@@ -89,5 +89,9 @@ public class Deck {
         else v = "K";
 
         return new Card(s, v);
+    }
+
+    public ArrayList<Card> getDeck() {
+        return deck;
     }
 }
